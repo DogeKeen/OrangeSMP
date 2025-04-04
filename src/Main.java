@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         JsonLoader json = new JsonLoader();
-        Window win = new Window(json.Options("screenSize"), json.Options("colourMode"), new KeyAdapter() {
+        Window win = new Window(json.options("screenSize"), json.options("colourMode"), new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent key) {
                 super.keyPressed(key);
