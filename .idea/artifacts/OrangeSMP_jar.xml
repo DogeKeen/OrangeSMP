@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="OrangeSMP:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/OrangeSMP_jar</output-path>
+    <root id="archive" name="OrangeSMP.jar">
+      <element id="module-output" name="OrangeSMP" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resrcs/lib/gson-2.12.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resrcs/lib/error_prone_annotations-2.36.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
