@@ -5,8 +5,8 @@ public class Main {
     public static int keyPressed = 0;
 
     public static void main(String[] args) {
-        JsonLoader json = new JsonLoader();
-        Window win = new Window(json.options("screenSize"), json.options("colourMode"), new KeyAdapter() {
+        JsonLoader jsonLoad = new JsonLoader();
+        Window win = new Window(jsonLoad.options().screenSize, jsonLoad.options().colourMode, new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent key) {
                 super.keyPressed(key);

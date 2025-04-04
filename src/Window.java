@@ -8,36 +8,25 @@ public class Window extends JFrame {
             case "4:3" -> {
                 setSize(1024, 768);
                 setExtendedState(NORMAL);
-                setResizable(false);
-                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setLocationRelativeTo(null);
             }
             case "16:9" -> {
                 setSize(1368, 768);
                 setExtendedState(NORMAL);
-                setResizable(false);
-                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setLocationRelativeTo(null);
             }
             case "16:10" -> {
                 setSize(1440, 900);
                 setExtendedState(NORMAL);
-                setResizable(false);
-                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setLocationRelativeTo(null);
             }
             case "Maximised" -> {
                 setSize(1368, 768);
                 setExtendedState(MAXIMIZED_BOTH);
-                setResizable(false);
-                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                //setLocationRelativeTo(null);
             }
             default -> {
                 setSize(1024, 768);
                 setExtendedState(NORMAL);
-                setResizable(false);
-                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setLocationRelativeTo(null);
                 System.out.println("\"screenSize\" variable is invalid.");
             }
@@ -52,6 +41,8 @@ public class Window extends JFrame {
             System.out.println("\"colourMode\" variable is invalid.");
         }
 
+        setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
         addKeyListener(listener);

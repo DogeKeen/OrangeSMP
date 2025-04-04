@@ -8,53 +8,38 @@ public class JsonLoader {
         System.out.println("\"JsonLoader.java\" loaded successfully.");
     }
 
-    public String options(String variable) {
+    public Options options() {
+        Options opt = null;
+
+        try (JsonReader options = new JsonReader(new FileReader(System.getProperty("user.dir") + "/resrcs/options.json"))) {
+            options.beginObject();
+            opt = this.optReader(options);
+            options.endObject();
+        } catch (IOException ignored) {
+        }
+
+        return opt;
+    }
+    public Options optReader(JsonReader json) throws IOException {
         String colourMode = "";
         String font = "";
         String language = "";
         String screenSize = "";
 
-        try (JsonReader options = new JsonReader(new FileReader(System.getProperty("user.dir") + "/resrcs/options.json"))) {
-            options.beginObject();
-            while (options.hasNext()) {
-                String var = options.nextName();
-                switch (var) {
-                    case "colourMode" -> colourMode = options.nextString();
-                    case "font" -> font = options.nextString();
-                    case "language" -> language = options.nextString();
-                    case "screenSize" -> screenSize = options.nextString();
-                    default -> options.skipValue();
-                }
-            }
-            options.endObject();
-        } catch (IOException e) {
-            try (JsonReader options = new JsonReader(new FileReader(String.valueOf(JsonLoader.class.getResourceAsStream("options.json"))))) {
-                options.beginObject();
-                while (options.hasNext()) {
-                    String var = options.nextName();
-                    switch (var) {
-                        case "colourMode" -> colourMode = options.nextString();
-                        case "font" -> font = options.nextString();
-                        case "language" -> language = options.nextString();
-                        case "screenSize" -> screenSize = options.nextString();
-                        default -> options.skipValue();
-                    }
-                }
-                options.endObject();
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
+        while (json.hasNext()) {
+            String var = json.nextName();
+            switch (var) {
+                case "colourMode" -> colourMode = json.nextString();
+                case "font" -> font = json.nextString();
+                case "language" -> language = json.nextString();
+                case "screenSize" -> screenSize = json.nextString();
+                default -> json.skipValue();
             }
         }
 
-        return switch (variable) {
-            case "colourMode" -> colourMode;
-            case "font" -> font;
-            case "language" -> language;
-            case "screenSize" -> screenSize;
-            default -> "Error!";
-        };
-
+        return new Options(colourMode, font, language, screenSize);
     }
+
 
     public String lang(String str, String textLang) {
         String helpCmdError = "";
