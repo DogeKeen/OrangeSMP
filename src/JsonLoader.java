@@ -22,6 +22,7 @@ public class JsonLoader {
     }
     public Options optReader(JsonReader json) throws IOException {
         String colourMode = "";
+        boolean debug = false;
         String font = "";
         String language = "";
         String screenSize = "";
@@ -30,6 +31,7 @@ public class JsonLoader {
             String var = json.nextName();
             switch (var) {
                 case "colourMode" -> colourMode = json.nextString();
+                case "debug" -> debug = json.nextBoolean();
                 case "font" -> font = json.nextString();
                 case "language" -> language = json.nextString();
                 case "screenSize" -> screenSize = json.nextString();
@@ -37,7 +39,7 @@ public class JsonLoader {
             }
         }
 
-        return new Options(colourMode, font, language, screenSize);
+        return new Options(colourMode, debug, font, language, screenSize);
     }
 
 

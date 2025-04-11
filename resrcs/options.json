@@ -1,5 +1,6 @@
 {
   "colourMode": "Dark",
+  "debug": false,
   "font": "Mono Orange",
   "language": "en_gb",
   "screenSize": "4:3"
