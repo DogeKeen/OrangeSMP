@@ -7,6 +7,6 @@ To run the Jar file, you first need to install at least [Adoptium's Java 21 JDK]
 Afterwards, go to the latest [release](https://github.com/DogeKeen/OrangeSMP/releases) and download the Jar and run it with OpenJDK.
 <br><br>
 ### Current Version
-**Update 1.1.3_indev**<br>
+**Update 1.1.4_alpha**<br>
 - Polished some code and worked on more JSON loading.
 - More JSON items.
