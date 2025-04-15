@@ -8,5 +8,5 @@ Afterwards, go to the latest [release](https://github.com/DogeKeen/OrangeSMP/rel
 <br><br>
 ### Current Version
 **Update 1.1.5a_alpha**<br>
-- Polished some code and worked on more JSON loading.
-- More JSON items.
+- Added a debug mode
+- Added colours to the debug information
