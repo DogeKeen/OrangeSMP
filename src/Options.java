@@ -1,3 +1,4 @@
+
 public class Options {
     String colourMode;
     boolean debug;

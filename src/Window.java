@@ -2,6 +2,7 @@ import javax.swing.JFrame;
 import java.awt.Color;
 import java.awt.event.KeyListener;
 
+
 public class Window extends JFrame {
     public Window(String ratio, String colour, KeyListener listener) {
         switch (ratio) {

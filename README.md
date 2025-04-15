@@ -9,7 +9,5 @@ To run the Jar file, you first need to install at least [Adoptium's Java 21 JDK]
 Afterwards, go to the latest [release](https://github.com/DogeKeen/OrangeSMP/releases) and download the Jar and run it with OpenJDK.
 <br><br>
 ## Current Version
-**Update 1.1.51a_alpha**<br>
-- Added a debug mode
-- Added colours to the debug information
-- Added a player to the member list
+**Update 1.1.6_alpha**<br>
+- Added information about members

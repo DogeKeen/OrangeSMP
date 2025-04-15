@@ -1,7 +1,7 @@
 {
   "command.accept": "Yes",
+  "command.back": "Back",
   "command.deny": "No",
-  "credits.command.back": "Back",
   "credits.developer": "Coder:  IsSlushi",
   "credits.infoSource": "Everything here is documented by IsSlushi with the help of other players and mods.",
   "credits.serverHost": "Host:   Nova Studios",
@@ -58,6 +58,8 @@
   "options.help.screenSize.sixTen": "A 16:10 ratio window, 1440 pixels long, 900 pixels high. Limited support, visual errors may occur.",
   "options.reset.warning": "Are you sure? This will reset all settings back to their default!",
   "options.select": "Please enter an option.",
+  "players.command.inspect": "Data <username>",
+  "players.help.inspect": "Opens the selected user's profile.",
   "subtitle.credits": "Credits",
   "subtitle.menu": "Main Menu",
   "subtitle.options": "Options",
