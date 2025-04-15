@@ -50,7 +50,7 @@ public class Window extends JFrame {
             case "Maximised" -> {
                 setSize(1368, 768);
                 if (Main.jsonLoad.options().debug) {
-                    System.out.println("? Window.java || Set window size to 1368x768 (16:9).\n?? Line 50 || Window scale is redundant due to the window being maximised.");
+                    System.out.println("\u001B[33m? Window.java || Set window size to 1368x768 (16:9).\n?? Line 51 || Window scale is redundant due to the window being maximised.\u001B[0m");
                 }
                 setExtendedState(MAXIMIZED_BOTH);
                 if (Main.jsonLoad.options().debug) {
@@ -60,15 +60,15 @@ public class Window extends JFrame {
             default -> {
                 setSize(1024, 768);
                 if (Main.jsonLoad.options().debug) {
-                    System.out.println("! Window.java || Set window size to 1024x768 (4:3).");
+                    System.out.println("\u001B[31m! Window.java || Set window size to 1024x768 (4:3).\u001B[0m");
                 }
                 setExtendedState(NORMAL);
                 if (Main.jsonLoad.options().debug) {
-                    System.out.println("! Window.java || Set extended state to normal.");
+                    System.out.println("\u001B[31m! Window.java || Set extended state to normal.\u001B[0m");
                 }
                 setLocationRelativeTo(null);
                 if (Main.jsonLoad.options().debug) {
-                    System.out.println("! Window.java || Centred the window.\n!! Line 7 || The value for \"screenSize\" is invalid. The window has loaded with its default parameters.");
+                    System.out.println("\u001B[31m! Window.java || Centred the window.\n!! Line 7 || The value for \"screenSize\" is invalid. The window has loaded with its default parameters.\u001B[0m");
                 }
             }
         }
@@ -86,7 +86,7 @@ public class Window extends JFrame {
         } else {
             getContentPane().setBackground(Color.BLACK);
             if (Main.jsonLoad.options().debug) {
-                System.out.println("! Window.java || Set background colour to black.\n!! Line 76 || The value for \"colourMode\" is invalid. The background has been set to its default parameter.");
+                System.out.println("\u001B[31m! Window.java || Set background colour to black.\n!! Line 76 || The value for \"colourMode\" is invalid. The background has been set to its default parameter.\u001B[0m");
             }
         }
 
